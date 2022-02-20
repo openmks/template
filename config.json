@@ -1,0 +1,36 @@
+{
+    "application": {
+        "name": "Master",
+        "server": {
+            "address": {
+                "ip": "localhost",
+                "use_local_ip": false
+            },  
+            "web": {
+                "port": 8282
+            },
+            "web_socket": {
+                "port": 1981
+            },
+            "socket": {
+                "port": 10081
+            },
+            "broadcast": {
+                "port": 5007
+            }
+        },
+        "autolaunch": {
+            "type": "app",
+            "enabled": false
+        }
+    },
+    "terminal": {
+
+    },
+    "logger": {
+
+    },
+    "network": {
+        "iface": "{661BBD28-7062-4AB3-902F-03728D380938}"
+    }
+}

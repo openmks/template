@@ -1,0 +1,1 @@
+"c:\program files (x86)\Google\Chrome\Application\chrome.exe" --window-size=1400,800 -incognito --app="http://10.0.0.5:8282"
