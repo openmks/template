@@ -24,13 +24,9 @@ TemplateModuleView.prototype.SetHostingID = function(id) {
 TemplateModuleView.prototype.Build = function(data, callback) {
     var self = this;
 
-    app.API.GetResourceContent({
-        "file_path": "modules/TemplateModuleView.html"
-    }, function(res) {
-        // Get payload
-        var payload = res.payload;
+	 app.API.GetModuleUI("TemplateModuleView.html", function(html) {
         // Get HTML content
-        self.HTML = app.API.ConvertHEXtoString(payload.content).replace("[ID]", self.HostingID);
+        self.HTML = html.replace("[ID]", self.HostingID);
         // Each UI module have encapsulated conent in component object (DIV)
         self.ComponentObject = document.getElementById("id_m_component_view_"+this.HostingID);
         // Apply HTML to DOM
@@ -49,11 +45,9 @@ TemplateModuleView.prototype.Clean = function() {
 }
 
 TemplateModuleView.prototype.Hide = function() {
-    var self = this;
     this.ComponentObject.classList.add("d-none")
 }
 
 TemplateModuleView.prototype.Show = function() {
-    var self = this;
     this.ComponentObject.classList.remove("d-none")
 }

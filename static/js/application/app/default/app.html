@@ -7,34 +7,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" id="id_m_app_plc_info" href="#" onclick="app.MenuSelection_OnClick(this, window.ApplicationModules.ModuleInformationView);">Information</a>
+                    <a class="nav-link" id="id_m_main_gateway" href="#" onclick="">File</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="id_m_app_plc_settings" href="#">Settings</a>
+                    <a class="nav-link" id="id_m_main_settings" href="#">Help</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <br>
-    <div class="row">
-        <div class="col-xl-12">
-            <h5 class="mb-3">PLC List</h5>
-            <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-group mr-2">
-                    <button class="btn btn-sm btn-outline-secondary" onclick="app.AppendNewPLC_OnClick();">Append new PLC</button>
-                    <button class="btn btn-sm btn-outline-secondary" onclick="app.SearchForPLC_OnClick();">Search</button>
-                </div>
-            </div>
-            <br>
-            <div class="mb-3">
-                <div id="id_m_app_plc_list_table"></div>
-            </div>
-        </div>
-    </div>
     <div>
-        <div id="id_application_plc_view_module">
-            <div style="text-align: center;"><span>PLC not connected to the view</span></div>
-        </div>
+        <br>
+        <div id="id_application_view_module"></div>
     </div>
+    <!-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"></div> -->
     <footer class="footer"></footer>
 </main>
