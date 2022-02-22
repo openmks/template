@@ -24,7 +24,7 @@ TemplateModuleView.prototype.SetHostingID = function(id) {
 TemplateModuleView.prototype.Build = function(data, callback) {
     var self = this;
 
-    app.API.GetFileContent({
+    app.API.GetResourceContent({
         "file_path": "modules/TemplateModuleView.html"
     }, function(res) {
         // Get payload
