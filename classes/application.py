@@ -4,9 +4,9 @@ import time
 import _thread
 
 from core import co_application
-from core import co_local_socket_mngr
 from core import co_multicaster
-from core import co_queue
+from core import co_udp_broadcast
+from core import co_beaconer
 
 class Application(co_application.ApplicationLayer):
 	def __init__(self):
@@ -17,7 +17,7 @@ class Application(co_application.ApplicationLayer):
 		self.Working 		= False
 		self.ErrorCallback 	= None
 
-		self.Users 			= co_multicaster.MulticasterUsers()
+		self.Users 			= co_beaconer.Beaconer(co_udp_broadcast.UDPBroadcaster())
 		self.Users.UserEventsCallback = self.UsersEventHandler
 	
 	def WebErrorEvent(self):
